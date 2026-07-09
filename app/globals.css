@@ -1,26 +1,159 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-taupe: #967f71;
+  --color-taupe-dark: #7c685c;
+  --color-taupe-deep: #5e4f45;
+  --color-taupe-light: #b3a294;
+  --color-sage: #788473;
+  --color-sage-dark: #5f6a5b;
+  --color-sage-deep: #475044;
+  --color-sage-light: #a3ac9d;
+  --color-cream: #faf7f2;
+  --color-linen: #f2ece3;
+  --color-sand: #e7dfd3;
+  --color-ink: #3a322c;
+  --color-ink-soft: #6b6058;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-figtree), system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-sage-light);
+  color: var(--color-ink);
+}
+
+/* Tracked-out caps label, matches the logo's tagline treatment */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-sage-dark);
+}
+
+.eyebrow-light {
+  color: var(--color-sage-light);
+}
+
+/* Editorial serif display headings */
+.display {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--color-taupe);
+  color: var(--color-cream);
+}
+
+.btn-primary:hover {
+  background: var(--color-taupe-dark);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-ink);
+  color: var(--color-ink);
+}
+
+.btn-outline:hover {
+  background: var(--color-ink);
+  color: var(--color-cream);
+}
+
+.btn-light {
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.btn-light:hover {
+  background: var(--color-sand);
+}
+
+.btn-outline-light {
+  border: 1px solid rgba(250, 247, 242, 0.6);
+  color: var(--color-cream);
+}
+
+.btn-outline-light:hover {
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+/* Form fields on the contact page */
+.field {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--color-sand);
+  padding: 0.875rem 1rem;
+  font-size: 0.9375rem;
+  color: var(--color-ink);
+  transition: border-color 0.3s ease;
+}
+
+select.field {
+  appearance: none;
+  border-radius: 0;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236b6058' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.field::placeholder {
+  color: var(--color-taupe-light);
+}
+
+.field:focus {
+  outline: none;
+  border-color: var(--color-sage);
+}
+
+.field-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  margin-bottom: 0.5rem;
 }
