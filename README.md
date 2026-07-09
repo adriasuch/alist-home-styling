@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# A List Home Styling — Website
 
-## Getting Started
+Hi Amanda and Adria! This is the home of your website. Everything that appears on
+alisthomestyling.com lives in this project, and you never have to touch the code
+to change it.
 
-First, run the development server:
+## The one thing to know
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Just tell the agent what you want, in plain English.** That's it. Open this
+project in Claude Code (or claude.ai/code) and type what you'd tell a web
+designer. The agent reads this project, makes the change, shows it to you, and
+publishes it when you say so.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Real examples you can copy and paste:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- "Change my bio on the About page to say: ..."
+- "Here's our real email and phone number, put them everywhere: ..."
+- "Replace the photos on the home page with the ones I just added to my Desktop"
+- "Add a new FAQ: do you stage short term rentals?"
+- "Make the testimonial say this quote from our client Sarah: ..."
+- "Show me what the site looks like right now"
+- "Publish the latest changes"
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You don't need to know where anything lives in the code. The agent will find it.
 
-## Learn More
+## What the site includes
 
-To learn more about Next.js, take a look at the following resources:
+| Page | What's on it |
+|---|---|
+| Home | Big beautiful hero, who you help, your 3 packages, how it works, portfolio, service area |
+| Services | Full Staging, Partial Staging, and Styling Consultation packages, add-ons, FAQ |
+| About | Your story, a section for each of you, and a "better together" section |
+| Contact | The consultation request form and your contact info |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The call to action everywhere is "Request a Consultation". No prices are shown
+on the site on purpose; quotes happen after the walkthrough.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Things still marked as placeholder
 
-## Deploy on Vercel
+These are written in a stand-in voice so the site looks finished. Replace them
+whenever you're ready by telling the agent the real version:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Your bios and your story** on the About page
+2. **Your portraits and a photo of the two of you** (currently elegant "coming soon" blocks)
+3. **Portfolio photos** (currently tasteful stock photos, swap in your real work)
+4. **Email and phone number** (currently hello@alisthomestyling.com and a 555 number)
+5. **The testimonial** on the home page
+6. **The contact form delivery** (the form looks and works perfectly, but it isn't
+   connected to your inbox yet; tell the agent "wire up the contact form to send
+   to my email" when ready)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Your brand, for reference
+
+- Colors: warm taupe `#967F71` and sage green `#788473` on cream
+- Fonts: an elegant serif (Cormorant Garamond) for headlines, a clean sans (Figtree) for everything else
+- Voice: warm, honest, like a stylish friend. Never corporate.
+- Logos live in `public/brand/` (the originals are safe elsewhere)
+
+## For the technically curious (totally optional)
+
+This is a Next.js 16 site styled with Tailwind CSS, deployed on Vercel. To run
+it locally: `npm install`, then `npm run dev`, then open http://localhost:3000.
+But honestly, just ask the agent to do it.
