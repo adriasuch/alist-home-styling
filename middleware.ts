@@ -9,7 +9,10 @@ function isStaticAsset(pathname: string) {
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  if (pathname === "/" || isStaticAsset(pathname)) {
+  // Preview-only: let /contact through so it can be reviewed before launch.
+  const previewAllowed =
+    process.env.VERCEL_ENV === "preview" && pathname === "/contact";
+  if (pathname === "/" || isStaticAsset(pathname) || previewAllowed) {
     return NextResponse.next();
   }
   return NextResponse.redirect(new URL("/", request.url));
