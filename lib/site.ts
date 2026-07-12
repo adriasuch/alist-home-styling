@@ -6,6 +6,10 @@ export const site = {
   url: "https://alisthomestyling.com",
   email: "hello@alisthomestyling.com", // placeholder, confirm before launch
   phone: "(303) 555-0100", // placeholder, confirm before launch
+  team: [
+    { name: "Adria", email: "adria@alisthomestyling.com" },
+    { name: "Amanda", email: "amanda@alisthomestyling.com" },
+  ],
   city: "Boulder",
   state: "CO",
   instagram: "https://instagram.com/alisthomestyling", // placeholder

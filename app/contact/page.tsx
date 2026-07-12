@@ -61,16 +61,17 @@ export default function ContactPage() {
                 <div className="border border-sand bg-linen p-8">
                   <p className="eyebrow">Reach us directly</p>
                   <ul className="mt-5 space-y-4">
-                    <li>
-                      <p className="field-label !mb-1">Email</p>
-                      {/* Placeholder email from lib/site.ts, confirm before launch */}
-                      <a
-                        href={`mailto:${site.email}`}
-                        className="text-base text-ink underline decoration-sand underline-offset-4 transition-colors hover:text-taupe"
-                      >
-                        {site.email}
-                      </a>
-                    </li>
+                    {site.team.map((person) => (
+                      <li key={person.email}>
+                        <p className="field-label !mb-1">{person.name}</p>
+                        <a
+                          href={`mailto:${person.email}`}
+                          className="text-base text-ink underline decoration-sand underline-offset-4 transition-colors hover:text-taupe"
+                        >
+                          {person.email}
+                        </a>
+                      </li>
+                    ))}
                     <li>
                       <p className="field-label !mb-1">Phone</p>
                       {/* Placeholder phone from lib/site.ts, confirm before launch */}
@@ -161,12 +162,17 @@ export default function ContactPage() {
             <p className="mt-4 text-base text-ink-soft">
               Skip the form and write to us directly. We read everything.
             </p>
-            <a
-              href={`mailto:${site.email}`}
-              className="btn btn-outline mt-6"
-            >
-              Email {site.email}
-            </a>
+            <div className="mt-6 flex flex-wrap justify-center gap-4">
+              {site.team.map((person) => (
+                <a
+                  key={person.email}
+                  href={`mailto:${person.email}`}
+                  className="btn btn-outline"
+                >
+                  Email {person.name}
+                </a>
+              ))}
+            </div>
           </Reveal>
         </div>
       </section>
