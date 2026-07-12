@@ -1,12 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export function middleware(request: NextRequest) {
-  if (request.nextUrl.pathname !== "/") {
-    return NextResponse.redirect(new URL("/", request.url));
-  }
-  return NextResponse.next();
+function isStaticAsset(pathname: string) {
+  return (
+    pathname.startsWith("/_next") ||
+    /\.[a-zA-Z0-9]+$/.test(pathname)
+  );
 }
 
-export const config = {
-  matcher: ["/((?!_next|favicon.ico|icon.png|robots.txt|sitemap.xml).*)"],
-};
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+  if (pathname === "/" || isStaticAsset(pathname)) {
+    return NextResponse.next();
+  }
+  return NextResponse.redirect(new URL("/", request.url));
+}
