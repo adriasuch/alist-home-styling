@@ -64,7 +64,7 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <Link href="/contact" className="btn btn-consultation !px-6 !py-3">
+          <Link href="/contact" className="btn btn-primary !px-6 !py-3">
             Request a Consultation
           </Link>
         </nav>
@@ -111,7 +111,7 @@ export default function Header() {
                   {item.label}
                 </Link>
               ))}
-              <Link href="/contact" className="btn btn-consultation mt-4">
+              <Link href="/contact" className="btn btn-primary mt-4">
                 Request a Consultation
               </Link>
             </div>

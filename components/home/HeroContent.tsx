@@ -50,7 +50,7 @@ export default function HeroContent() {
       </Rise>
       <Rise delay={0.6}>
         <div className="mt-9 flex flex-wrap gap-4">
-          <Link href="/contact" className="btn btn-consultation">
+          <Link href="/contact" className="btn btn-light">
             Request a Consultation
           </Link>
           <Link href="/services" className="btn btn-outline-light">

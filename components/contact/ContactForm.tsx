@@ -225,7 +225,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="btn btn-consultation mt-8 w-full disabled:cursor-not-allowed disabled:opacity-70"
+        className="btn btn-primary mt-8 w-full disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === "submitting" ? "Sending..." : "Request My Consultation"}
       </button>

@@ -14,8 +14,6 @@
   --color-sand: #e7dfd3;
   --color-ink: #3a322c;
   --color-ink-soft: #6b6058;
-  --color-consult-blue: #2563eb;
-  --color-consult-blue-dark: #1d4ed8;
 
   --font-serif: var(--font-cormorant), Georgia, serif;
   --font-sans: var(--font-figtree), system-ui, sans-serif;
@@ -118,15 +116,6 @@ body {
 .btn-outline-light:hover {
   background: var(--color-cream);
   color: var(--color-ink);
-}
-
-.btn-consultation {
-  background: var(--color-consult-blue);
-  color: var(--color-cream);
-}
-
-.btn-consultation:hover {
-  background: var(--color-consult-blue-dark);
 }
 
 /* Form fields on the contact page */

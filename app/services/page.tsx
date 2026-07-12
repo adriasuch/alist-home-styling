@@ -224,7 +224,7 @@ export default function ServicesPage() {
                   </ul>
 
                   <div className="mt-10">
-                    <Link href="/contact" className="btn btn-consultation">
+                    <Link href="/contact" className="btn btn-primary">
                       Request a Consultation
                     </Link>
                   </div>

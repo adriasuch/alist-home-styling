@@ -31,7 +31,7 @@ export default function CTABand({
             </p>
           )}
           <div className="mt-9">
-            <Link href={buttonHref} className="btn btn-consultation">
+            <Link href={buttonHref} className="btn btn-light">
               {buttonLabel}
             </Link>
           </div>
