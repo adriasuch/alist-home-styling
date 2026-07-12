@@ -23,8 +23,9 @@ export default function Header() {
     setOpen(false);
   }, [pathname]);
 
-  // Over the home hero photo the header is transparent, so flip to light-on-dark
-  const onDarkHero = pathname === "/" && !scrolled && !open;
+  // The home hero photo is only shown once the full site replaces the
+  // coming-soon placeholder, so there's no dark background to flip against yet.
+  const onDarkHero = false;
 
   return (
     <header
